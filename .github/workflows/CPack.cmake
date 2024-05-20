@@ -37,3 +37,10 @@ jobs:
         with:
           name: example
           path: build/example
+      - name: Build example
+    run: cmake --build ${{github.workspace}}/build
+      - name: Upload artifact
+      uses: actions/upload-artifact@v2
+       with:
+       name: my-executable
+       path: /home/runner/work/Rk/Rk/rk2
