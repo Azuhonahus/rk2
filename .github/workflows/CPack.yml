@@ -1,11 +1,11 @@
-name: actions
+name: CPack
 
 on:
  push:
   branches: [main]
  pull_request:
   branches: [main]
-  
+
 jobs: 
  build_Linux:
 
@@ -14,8 +14,8 @@ jobs:
   steps:
   - uses: actions/checkout@v4
 
-  - name: config example
-    run: cmake -H. -B ${{github.workspace}}/build
-    
-  - name: config example
+  - name: Configure example
+    run: cmake ${{github.workspace}} -B ${{github.workspace}}/build
+
+  - name: Build example
     run: cmake --build ${{github.workspace}}/build
