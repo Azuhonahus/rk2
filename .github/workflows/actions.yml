@@ -14,6 +14,9 @@ jobs:
   steps:
   - uses: actions/checkout@v4
 
+  - name: putting gtest
+    run: git clone https://github.com/google/googletest.git third-party/gtest
+
   - name: Configure example
     run: cmake ${{github.workspace}} -B ${{github.workspace}}/build
 
