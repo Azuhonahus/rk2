@@ -22,8 +22,8 @@ jobs:
 
   - name: Build example
     run: cmake --build ${{github.workspace}}/build
-  - name: Upload artifact
-    uses: actions/upload-artifact@v2
+  - name: Artifact
+    uses: actions/upload-artifact@v4
     with:
-     name: my-executable
-     path: /home/runner/work/Rk/Rk/rk2
+     name: example
+     path: build/example
