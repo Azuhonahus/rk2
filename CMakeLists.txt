@@ -23,7 +23,6 @@ if(BUILD_TESTS)
     add_executable(check tests/test.cpp)
     target_link_libraries(check
         gtest_main
-        MVC
     )
     add_test(NAME check COMMAND check)
 endif()
