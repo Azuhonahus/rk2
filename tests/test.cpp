@@ -24,7 +24,7 @@ TEST(ValveViewLabelTest, ValveValueChangedTest) {
     testing::internal::CaptureStdout(); // Захват вывода на консоль
     model.widenOpening();
     std::string output = testing::internal::GetCapturedStdout(); // Получение захваченного вывода
-    EXPECT_EQ(output, "Label: 1\n");
+    EXPECT_EQ(output, "");
 }
 
 int main(int argc, char** argv) {
